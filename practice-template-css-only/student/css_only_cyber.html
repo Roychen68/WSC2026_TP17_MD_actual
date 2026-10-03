@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS-only Atlas - Practice</title>
+  <link rel="stylesheet" href="css_only_cyber.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <p class="eyebrow">WORLDSKILLS PRACTICE · MODULE D</p>
+    <h1>CSS-only Atlas</h1>
+    <p class="tagline">One structure. Four visual systems.</p>
+  </header>
+
+  <nav class="site-nav" aria-label="主要導覽">
+    <a href="#intro">Intro</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+    <div class="theme-menu">
+      <a href="#themes" class="theme-trigger">Themes</a>
+      <div class="theme-list" id="themes">
+        <a href="css_only_simple.html">Simple</a>
+        <a href="css_only_elegant.html">Elegant</a>
+        <a href="css_only_cyber.html">Cyber</a>
+        <a href="css_only_colorful.html">Colorful</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="intro" class="panel hero-panel">
+      <div>
+        <p class="kicker">A CSS-only interface laboratory</p>
+        <h2>Build interaction without changing the markup.</h2>
+        <p>完成四套版面、狀態與動畫；所有功能都必須由 CSS 驅動。</p>
+        <p class="actions">
+          <a class="button" href="#components">Start practice</a>
+          <a href="brief.pdf">Read the PDF brief</a>
+        </p>
+      </div>
+      <img src="images/atlas-01.svg" alt="抽象的流線山丘">
+    </section>
+
+    <section id="components" class="panel">
+      <h2>CSS-only Tabs</h2>
+      <div class="tabs">
+        <input class="state-input" type="radio" name="tabs" id="tab-overview" checked>
+        <label for="tab-overview">Overview</label>
+        <input class="state-input" type="radio" name="tabs" id="tab-details">
+        <label for="tab-details">Details</label>
+        <input class="state-input" type="radio" name="tabs" id="tab-reviews">
+        <label for="tab-reviews">Reviews</label>
+        <div class="tab-panels">
+          <article class="tab-panel overview"><h3>Overview</h3><p>選中的 panel 才能顯示。</p></article>
+          <article class="tab-panel details"><h3>Details</h3><p>狀態由 radio input 保存。</p></article>
+          <article class="tab-panel reviews"><h3>Reviews</h3><p>鍵盤操作與 focus 狀態都要保留。</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel slider-section" aria-labelledby="slider-title">
+      <h2 id="slider-title">Photo Slider</h2>
+      <div class="slider">
+        <input class="state-input" type="radio" name="slides" id="slide-1" checked>
+        <input class="state-input" type="radio" name="slides" id="slide-2">
+        <input class="state-input" type="radio" name="slides" id="slide-3">
+        <div class="slider-window">
+          <div class="slider-track">
+            <figure><img src="images/atlas-02.svg" alt="紫色抽象地景"><figcaption>Violet ridge</figcaption></figure>
+            <figure><img src="images/atlas-03.svg" alt="藍綠抽象地景"><figcaption>Teal current</figcaption></figure>
+            <figure><img src="images/atlas-04.svg" alt="橘紅抽象地景"><figcaption>Coral horizon</figcaption></figure>
+          </div>
+        </div>
+        <div class="slider-controls" aria-label="選擇投影片">
+          <label for="slide-1">1</label><label for="slide-2">2</label><label for="slide-3">3</label>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="panel">
+      <h2>Responsive Gallery</h2>
+      <div class="gallery-grid">
+        <a class="gallery-item" data-size="large" data-category="Aurora" href="#lb-1"><img src="images/atlas-01.svg" alt="粉藍色抽象圖"></a>
+        <a class="gallery-item" data-size="small" data-category="Violet" href="#lb-2"><img src="images/atlas-02.svg" alt="紫色抽象圖"></a>
+        <a class="gallery-item" data-size="small" data-category="Current" href="#lb-3"><img src="images/atlas-03.svg" alt="藍綠色抽象圖"></a>
+        <a class="gallery-item" data-size="large" data-category="Horizon" href="#lb-4"><img src="images/atlas-04.svg" alt="橘紅色抽象圖"></a>
+        <a class="gallery-item" data-size="small" data-category="Lagoon" href="#lb-5"><img src="images/atlas-05.svg" alt="青藍色抽象圖"></a>
+        <a class="gallery-item" data-size="small" data-category="Sunset" href="#lb-6"><img src="images/atlas-06.svg" alt="日落色抽象圖"></a>
+      </div>
+    </section>
+
+    <section id="features" class="panel">
+      <h2>Feature Cards</h2>
+      <div class="feature-grid">
+        <article class="feature-card" data-icon="✦" data-tier="core"><h3>State</h3><p>Radio、target 與 open state。</p></article>
+        <article class="feature-card" data-icon="⌁" data-tier="plus"><h3>Layout</h3><p>Grid、flex、sticky 與 fixed。</p></article>
+        <article class="feature-card" data-icon="◎" data-tier="pro"><h3>Motion</h3><p>Transition、keyframes 與 reduced motion。</p></article>
+      </div>
+      <div class="stats">
+        <figure data-value="04"><figcaption>Templates</figcaption></figure>
+        <figure data-value="06"><figcaption>Gallery items</figcaption></figure>
+        <figure data-value="00"><figcaption>JavaScript</figcaption></figure>
+        <figure data-value="100"><figcaption>CSS percent</figcaption></figure>
+      </div>
+      <ol class="timeline">
+        <li data-year="01">建立 tokens 與共用元件。</li>
+        <li data-year="02" data-highlight>完成 template 架構與招牌效果。</li>
+        <li data-year="03">測試 RWD、鍵盤與 motion preference。</li>
+      </ol>
+    </section>
+
+    <section id="pricing" class="panel">
+      <h2>Practice Plans</h2>
+      <table class="pricing-table">
+        <thead><tr><th>Plan</th><th>Time</th><th>Focus</th></tr></thead>
+        <tbody>
+          <tr><th>Warm-up</th><td>45 min</td><td>Components</td></tr>
+          <tr><th class="recommended">Sprint</th><td>120 min</td><td>Full template</td></tr>
+          <tr><th>Simulation</th><td>240 min</td><td>All four</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="panel faq-panel">
+      <h2>FAQ</h2>
+      <details open><summary>可以修改 HTML 嗎？</summary><p>不可以，只有 stylesheet 路徑可以不同。</p></details>
+      <details><summary>可以使用 JavaScript 嗎？</summary><p>不可以，互動必須使用 CSS。</p></details>
+      <details><summary>需要支援鍵盤嗎？</summary><p>需要，hidden state input 仍須可操作。</p></details>
+    </section>
+
+    <section id="contact" class="panel">
+      <h2>Contact</h2>
+      <form action="#contact" method="get">
+        <label>姓名<input name="name" autocomplete="name" required minlength="2"></label>
+        <label>Email<input type="email" name="email" autocomplete="email" required></label>
+        <label>訊息<textarea name="message" required minlength="10"></textarea></label>
+        <label>練習份數<input type="number" name="quantity" min="1" max="10" value="1" required></label>
+        <button class="button" type="submit">Send</button>
+      </form>
+      <p><a href="mailto:practice@example.com">practice@example.com</a></p>
+    </section>
+  </main>
+
+  <footer><a href="#top">Back to top</a><p>CSS-only Atlas practice set</p></footer>
+
+  <div class="lightbox" id="lb-1"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-01.svg" alt="粉藍色抽象圖放大檢視"></div>
+  <div class="lightbox" id="lb-2"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-02.svg" alt="紫色抽象圖放大檢視"></div>
+  <div class="lightbox" id="lb-3"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-03.svg" alt="藍綠色抽象圖放大檢視"></div>
+  <div class="lightbox" id="lb-4"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-04.svg" alt="橘紅色抽象圖放大檢視"></div>
+  <div class="lightbox" id="lb-5"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-05.svg" alt="青藍色抽象圖放大檢視"></div>
+  <div class="lightbox" id="lb-6"><a class="lightbox-close" href="#gallery">Close</a><img src="images/atlas-06.svg" alt="日落色抽象圖放大檢視"></div>
+</body>
+</html>
+

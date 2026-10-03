@@ -1,0 +1,222 @@
+
+===== PAGE 1 =====
+ 
+WSC2026_TP17_en 
+Test Project 
+Module D – CSS only  
+Web Technologies 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Submitted by: 
+(Thomas) Seng Hin MAK, Independent Test Project Designer 
+Gilles Granger, Indepdendent Test Project Validator 
+Hok Kin Fong, Indepdendent Test Project Validiator 
+
+===== PAGE 2 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 2 of 7 
+ 
+Contents 
+Contents ................................ ................................ ................................ ................................ .....................  2 
+Introduction ................................ ................................ ................................ ................................ ................  3 
+Description of project and tasks ................................ ................................ ................................ .................  3 
+Required UI Components ................................................................................................................................. 3 
+Already provided by the locked HTML (for reference — no work needed) ................................................................... 3 
+What your CSS must achieve ............................................................................................................................................. 3 
+CSS Architecture ............................................................................................................................................... 4 
+Provided Themes .............................................................................................................................................. 4 
+Template A - Simple (css_only_simple) ............................................................................................................................. 5 
+Template B — Elegant (css_only_elegant) ........................................................................................................................ 5 
+Template C — Cyber (css_only_cyber) ............................................................................................................................... 6 
+Template D - Colorful (css_only_colorful) ......................................................................................................................... 7 
+Instructions to the Competitor ................................ ................................ ................................ ...................  7 
+ 
+  
+
+===== PAGE 3 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 3 of 7 
+ 
+Introduction  
+A CSS-only design challenge. Competitors receive a single locked HTML file that must not be edited (except for 
+the path of the linked CSS theme file). The goal is to implement four distinct visual themes and a full set of 
+interactive UI components — tabs, slider, gallery lightbox, dropdown, accordion and form states — using only 
+CSS. No JavaScript is used anywhere in this module. 
+Description of project and tasks 
+• The provided css_only_{theme}.html files share one locked HTML structure. Do not modify the HTML except 
+for the CSS file path. 
+• All styling must be written in a single CSS file per theme. 
+• No external CSS or JavaScript files are permitted. 
+• No JavaScript is permitted or required: every interaction (tabs, slider, lightbox, dropdown, accordion) and 
+every color scheme must work with CSS alone. 
+• Only Template C (Cyber) has two colour schemes: dark is the default, and a light variant applies automatically 
+when the user’s system is set to prefer light colours; there is no manual toggle. Templates A, B and D have a 
+single light colour scheme — no dark scheme is required for them. 
+• Provided files: this document; four locked HTML files (css_only_simple.html, css_only_elegant.html, 
+css_only_cyber.html, css_only_colorful.html); the images/ folder; four per-theme specification files (spec/); 
+reference screenshots (screenshots/). 
+Required UI Components 
+The locked HTML already contains every element and hook these components need. Section 2.1 lists what is 
+provided — for reference only, you must not and need not recreate it. Section 2.2 lists what your CSS must 
+achieve. 
+Already provided by the locked HTML (for reference — no work needed) 
+• Tab and slider state: radio inputs with matching labels are already in place for the three tabs and the three 
+slides. 
+• Lightbox: one .lightbox overlay element per gallery image (#lb-1 to #lb-6), each linked from its thumbnail and 
+containing a .lightbox-close link back to #gallery. 
+• Data hooks: gallery items carry data-size and data-category; feature cards carry data-icon and data-tier; 
+statistics carry data-value; timeline items carry data-year and data-highlight; the pricing table contains a 
+.recommended cell. 
+• The FAQ accordion is built with <details>/<summary>; one item is open by default. 
+• The theme chooser dropdown’s links already point to the four theme HTML files. 
+• The contact form already contains name, email, message and quantity fields; the quantity input is numeric 
+with min 1 and max 10, and the native validation attributes are in place. 
+• mailto: and .pdf links are present in the page content. 
+What your CSS must achieve 
+• Tabs — only the selected panel is visible; the active tab label is highlighted. 
+• Photo slider — three slides translated horizontally with a sliding transition; the numbered controls (1–3) select 
+a slide and the active control is highlighted. 
+• Responsive gallery — six images in a staggered mosaic; large items (data-size="large") span more tracks; the 
+grid adapts from 1 column on mobile to 2 on tablet and 3–4 on desktop. 
+
+===== PAGE 4 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 4 of 7 
+ 
+• Image lightbox —  clicking a gallery image opens its full-screen overlay using CSS only (no JavaScript); the 
+close control returns to the gallery. 
+• Feature card icons — each card’s icon is produced by CSS from its data-icon attribute. 
+• Statistics row — four figures with labels; the figures may be shown by CSS using each figure’s data-value 
+attribute. 
+• Timeline — each year badge is produced by CSS from the item’s data-year attribute; data-highlight entries 
+are emphasized. 
+• Pricing table — the entire row containing the .recommended cell is visually emphasized (e.g. enlarged or 
+recolored). 
+• FAQ accordion — styled expandable items; the default-open item comes from the HTML. 
+• Theme chooser dropdown — opens on hover and on keyboard focus. 
+• Contact form —  error styling appears only after user interaction or a submit attempt, never on page load; 
+native browser validation blocks submission while fields are invalid. 
+• In-page navigation — nav links, the theme chooser dropdown and other anchor links scroll smoothly to their 
+targets rather than jumping instantly. 
+• Link icons — links to email addresses are prefixed with an email icon and links to .pdf files with a document 
+icon, both added by CSS. 
+CSS Architecture 
+• The state-keeping radio inputs must be hidden from view without disabling them: label clicks, keyboard 
+interaction, and styling based on their state must all keep working — hiding them with display: none is not 
+acceptable. 
+• Gallery: with exactly 6 items the staggered mosaic is shown; with any other count the gallery falls back to the 
+regular responsive grid with no spanning. 
+• Navigation: with 5 or more items the links use compact sizing; with 4 or fewer the theme’s default sizing 
+applies. The exact default and compact sizes are specified per theme. 
+• Note: the locked HTML ships with 6 gallery items and 5 nav items, so the reference screenshots show the 
+mosaic and the compact nav sizing. 
+Provided Themes 
+• Template A - Simple (css_only_simple) - sticky top horizontal navigation. Signature effect: hover sweep-fill on 
+buttons (a fill sweeps across on hover and keyboard focus). 
+• Template B - Elegant (css_only_elegant) - sticky left sidebar navigation. Signature effect: filter card hover on 
+gallery images (grayscale and blur settle into full color, with a caption overlay showing each item’s data-
+category). 
+• Template C - Cyber (css_only_cyber) - fixed bottom navigation dock. Signature effect: terminal typing 
+animation on the header eyebrow (a letter-by-letter reveal with a travelling caret). 
+• Template D - Colorful (css_only_colorful) - full-viewport slides with mandatory scroll-snapping (one slide per 
+viewport, scroll snaps slide-by-slide) and a fixed right navigation rail. The snap effect is a required, separately 
+markable feature of this theme. Signature effect: pulsing glow ring (an animated glowing ring) on the 
+recommended pricing plan. 
+Note: Each provided theme demonstrates a distinct layout architecture and its own signature animation effect 
+(sweep-fill, filter card, typing, pulse) - not only color and typography changes. You must achieve equivalent 
+layout and effect differences using only CSS on the shared HTML structure. 
+Design values are given as named CSS variables written with a double dash, such as --color-bg. Define each 
+variable once with the exact name and value shown in the tables, then use these variables wherever the 
+
+===== PAGE 5 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 5 of 7 
+ 
+specification references them, instead of repeating literal values. The variable names and values in the tables are 
+required exactly as written; anything the specification does not mention is up to you, as long as the result 
+matches the reference screenshots. 
+The complete specification of each theme is provided as a text file in the spec/ folder (theme -a-simple.txt, theme-
+b-elegant.txt, theme-c-cyber.txt, theme-d-colorful.txt), and reference screenshots captured at a 1280 px 
+viewport are provided in the screenshots/ folder. These files are part of this test project and are as binding as this 
+document. Templates A, B and D have a single light colour scheme; only Template C has two schemes (dark 
+default, light variant) and the screenshots show both. 
+Template A - Simple (css_only_simple) 
+Full specification: spec/theme-a-simple.txt · Reference screenshots: screenshots/simple-*.png (1280 px viewport). 
+ 
+Page overview — sticky top navigation. 
+Template B — Elegant (css_only_elegant) 
+Full specification: spec/theme-b-elegant.txt · Reference screenshots: screenshots/elegant-*.png (1280 px 
+viewport). 
+
+
+===== PAGE 6 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 6 of 7 
+ 
+ 
+Page overview — sticky left sidebar navigation. 
+Template C — Cyber (css_only_cyber) 
+Full specification: spec/theme-c-cyber.txt · Reference screenshots: screenshots/cyber-dark-*.png (default dark 
+scheme) and screenshots/cyber-*.png (light variant). 
+ 
+Overview — dark scheme (the default for this theme), fixed bottom navigation dock. 
+ 
+
+
+===== PAGE 7 =====
+ 
+Date: 28.07.26 
+WSC2026_TP17_MD_actual_en 
+Version: 1.0      
+© WorldSkills International 7 of 7 
+ 
+Template D - Colorful (css_only_colorful) 
+Full specification: spec/theme-d-colorful.txt · Reference screenshots: screenshots/colorful-*.png (1280 px 
+viewport). 
+ 
+Page overview — hero slide with gradient title and fixed right navigation rail. 
+Instructions to the Competitor 
+• You need to commit your project to the git repository that you created on the submission platform.  
+• Please access to the submission platform dashboard by using the credentials you received.  
+• Keep the HTML files: css_only_simple.html, css_only_elegant.html, css_only_cyber.html, 
+css_only_colorful.html — unmodified; their only permitted difference is the linked CSS file path.  
+• Provide your CSS files: css_only_simple.css, css_only_elegant.css, css_only_cyber.css, css_only_colorful.css -  
+written by you, one CSS file per theme. 
+• The provided images folder (images/) - used as-is; do not rename or move it. 
+ 

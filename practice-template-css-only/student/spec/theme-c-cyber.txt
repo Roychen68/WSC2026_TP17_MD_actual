@@ -1,0 +1,47 @@
+TEMPLATE C - CYBER
+==================
+
+Architecture
+- Fixed navigation dock at the bottom, centered horizontally.
+- Reserve enough bottom padding that content and form controls are never hidden.
+- Main content max-width: 1040px.
+- Default nav link padding-inline: 16px.
+- Compact nav (5+ direct nav links): padding-inline 8px; font-size 0.72rem.
+
+Required variables - dark default
+--color-bg: #06070c
+--color-surface: #0d111b
+--color-text: #c9fff3
+--color-muted: #72a9a0
+--color-accent: #00e5b8
+--color-hot: #ff3b82
+--color-border: #16483f
+--radius: 0px
+--shadow: 0 0 28px rgba(0, 229, 184, 0.16)
+
+Light variant under @media (prefers-color-scheme: light)
+--color-bg: #eafdf8
+--color-surface: #f8fffd
+--color-text: #073a32
+--color-muted: #39766b
+--color-accent: #007b68
+--color-hot: #cf155e
+--color-border: #83cbbc
+--shadow: 0 14px 35px rgba(7, 58, 50, 0.12)
+
+Typography and appearance
+- Use ui-monospace, SFMono-Regular, Consolas, monospace.
+- Use sharp borders, small uppercase labels and terminal-like prefixes.
+- Active states combine --color-accent and --color-hot.
+
+Signature effect - terminal typing
+- Animate .eyebrow as a letter-by-letter width reveal.
+- Add a travelling/blinking caret with a pseudo-element or border.
+- It must play automatically without JavaScript.
+- Provide a fully visible, non-animated state for reduced motion.
+
+Responsive
+- Gallery is 1/2/3 columns at mobile/tablet/desktop.
+- Large items span two columns only when there are exactly 6 items.
+- Bottom dock may scroll horizontally on very narrow screens but must remain usable.
+

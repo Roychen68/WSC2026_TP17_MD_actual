@@ -1,0 +1,36 @@
+TEMPLATE A - SIMPLE
+===================
+
+Architecture
+- Sticky horizontal navigation at the top.
+- Main content max-width: 1120px; centered.
+- Default nav link padding-inline: 18px.
+- Compact nav (5+ direct nav links): padding-inline 10px; font-size 0.82rem.
+- Sections use ordinary document flow; minimum spacing between panels: 72px.
+
+Required variables (exact names and values)
+--color-bg: #f6f7fb
+--color-surface: #ffffff
+--color-text: #172033
+--color-muted: #667085
+--color-accent: #3157ff
+--color-border: #dfe3ec
+--radius: 12px
+--shadow: 0 14px 35px rgba(23, 32, 51, 0.10)
+
+Typography and appearance
+- Use a modern system sans-serif stack.
+- Headings are bold and compact; body line-height is at least 1.6.
+- Panels are white cards with subtle border and shadow.
+- Buttons and active controls use --color-accent.
+
+Signature effect - sweep-fill
+- .button uses a pseudo-element that sweeps from left to right.
+- The fill appears on both :hover and :focus-visible.
+- Text remains readable throughout the transition.
+
+Responsive
+- Gallery: 1 column below 600px; 2 from 600px; 4 from 960px.
+- With exactly 6 items, large items span two columns on desktop.
+- At reduced motion, transitions and smooth scrolling are disabled.
+

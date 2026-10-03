@@ -1,0 +1,38 @@
+TEMPLATE B - ELEGANT
+====================
+
+Architecture
+- Sticky left navigation sidebar on viewports 900px and wider.
+- Sidebar width: 220px; content begins after the sidebar.
+- Below 900px, navigation becomes a sticky horizontal bar.
+- Main content max-width: 980px.
+- Default nav link font-size: 0.95rem.
+- Compact nav (5+ direct nav links): font-size 0.78rem; letter-spacing 0.08em.
+
+Required variables (exact names and values)
+--color-bg: #f4efe6
+--color-surface: #fbf8f2
+--color-text: #332b25
+--color-muted: #796d63
+--color-accent: #9b6849
+--color-border: #d8cabb
+--radius: 2px
+--shadow: 0 18px 45px rgba(64, 46, 34, 0.08)
+
+Typography and appearance
+- Headings use Georgia, "Times New Roman", serif.
+- Body uses a system sans-serif stack.
+- Use thin rules, restrained contrast and generous vertical rhythm.
+- Avoid rounded-pill styling except where required for accessibility.
+
+Signature effect - filter reveal
+- Gallery images begin grayscale(1) blur(2px) with slightly reduced contrast.
+- On hover and focus-visible they settle into full color and no blur.
+- A caption generated from data-category overlays the image.
+- The caption remains readable without covering the entire image.
+
+Responsive
+- Desktop gallery has 3 columns; tablet 2; mobile 1.
+- With exactly 6 items, large items span two tracks at 900px and wider.
+- Sidebar must not obscure any target when anchor navigation is used.
+

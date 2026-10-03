@@ -1,0 +1,40 @@
+TEMPLATE D - COLORFUL
+=====================
+
+Architecture
+- The page scroll container must use mandatory vertical scroll snapping.
+- Header, every main section and footer occupy at least one viewport height.
+- Each viewport panel uses scroll-snap-align: start.
+- Fixed right navigation rail on viewports 900px and wider.
+- On smaller screens the rail moves to a fixed bottom bar.
+- Default nav link padding-block: 11px.
+- Compact nav (5+ direct nav links): padding-block 7px; font-size 0.72rem.
+
+Required variables (exact names and values)
+--color-bg: #fff7fc
+--color-surface: rgba(255, 255, 255, 0.78)
+--color-text: #40234f
+--color-muted: #7f628b
+--color-accent: #f044a7
+--color-accent-2: #26c6da
+--color-accent-3: #ffb238
+--color-border: rgba(116, 70, 140, 0.18)
+--radius: 24px
+--shadow: 0 22px 55px rgba(105, 50, 125, 0.16)
+
+Typography and appearance
+- Use a rounded system sans-serif stack.
+- Create soft multi-color background gradients without reducing text contrast.
+- Surfaces have translucent white fill, border and shadow.
+- The h1 and major active states use a pink-to-cyan gradient.
+
+Signature effect - pulse ring
+- The row containing .recommended receives a visible glowing ring.
+- The ring gently pulses using transform and opacity; the table must not reflow.
+- Disable the animation under prefers-reduced-motion.
+
+Responsive
+- Gallery is 1/2/3 columns; large items span two tracks only for exactly 6 items.
+- Fixed navigation must never cover form submit controls.
+- Mandatory snap remains active at all viewport sizes.
+
